@@ -1,4 +1,6 @@
 // src/components/sections/ContactSection.tsx
+import Image from 'next/image'
+
 interface ContactInfoProps {
   title: string;
   content: string | string[];
@@ -54,8 +56,13 @@ export default function ContactSection() {
             </div>
           </div>
 
-          <div className="h-96 bg-gray-200 rounded-xl flex items-center justify-center">
-            <span className="text-gray-500 text-lg">Google Maps Platzhalter</span>
+          <div className="relative h-96 rounded-xl overflow-hidden">
+            <Image
+              src="/screenshotgoogle.png"
+              alt="Standort Gasthof Kaisermühle"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
       </div>
